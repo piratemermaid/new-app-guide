@@ -1,20 +1,16 @@
+import { Box, Stack, Typography } from "@mui/material";
+
 import { CodeBlock } from "~/components/CodeBlock";
 
-type Props = {
-  step: Step;
-};
-
-export const ViteSetupStep = ({ step }: Props) => {
+export const ViteSetupStep = () => {
   return (
-    <div>
-      <h3>Create Vite App</h3>
-      <p>Last updated: {step.lastUpdated}</p>
-      <div>
-        <p>1. Create new vite app</p>
+    <Stack spacing={2}>
+      <Box>
+        <Typography>1. Create new vite app</Typography>
         <CodeBlock>npm create vite@latest</CodeBlock>
-      </div>
-      <div>
-        <p>2. Set up import path</p>
+      </Box>
+      <Box>
+        <Typography>2. Set up import path</Typography>
         <CodeBlock multiline>
           {`
   // vite.config.ts
@@ -33,24 +29,26 @@ export const ViteSetupStep = ({ step }: Props) => {
   });
   `}
         </CodeBlock>
-      </div>
-      <p>* If using Typescript:</p>
-      <div>
-        <p>3. Install required types</p>
+      </Box>
+      <Box>
+        <Typography>* If using Typescript:</Typography>
+      </Box>
+      <Box>
+        <Typography>3. Install required types</Typography>
         <CodeBlock>npm install --save-dev @types/node</CodeBlock>
-      </div>
-      <div>
-        <p>4. In tsconfig, add to top of compiler options</p>
+      </Box>
+      <Box>
+        <Typography>4. In tsconfig, add to top of compiler options</Typography>
         <CodeBlock>
           {`
   "baseUrl": ".",
   "paths": {
     "~/*": ["./src/*"]
     },
-    "typeRoots": ["./src/types"],
-    `}
+  "typeRoots": ["./src/types"],
+          `}
         </CodeBlock>
-      </div>
-    </div>
+      </Box>
+    </Stack>
   );
 };

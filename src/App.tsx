@@ -1,16 +1,29 @@
+import { Box, Typography } from "@mui/material";
+
 import { STEPS } from "./steps";
 
 function App() {
   return (
     <>
-      <h1>UI</h1>
+      <Typography variant="h1" sx={{ mb: 2 }}>
+        UI
+      </Typography>
       {STEPS.ui.map((step, index) => {
         return (
-          <div key={step.name} className="step">
+          <Box key={step.name} className="step" sx={{ my: 4 }}>
             <hr />
-            <h2>{step.name}</h2>
-            <step.Component key={index} step={step} />
-          </div>
+            <Box sx={{ my: 3 }}>
+              <Typography variant="h2" sx={{ mt: 2 }}>
+                {step.name}
+              </Typography>
+              <Typography variant="caption" sx={{ color: "action.disabled" }}>
+                Last updated: {step.lastUpdated}
+              </Typography>
+            </Box>
+            <Box sx={{ mt: 2 }}>
+              <step.Component key={index} step={step} />
+            </Box>
+          </Box>
         );
       })}
     </>

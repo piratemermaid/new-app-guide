@@ -29,5 +29,13 @@ export const defaultTheme = createTheme({
     allVariants: {
       color: palette.text,
     },
+    h1: {
+      fontSize: "3rem",
+      color: palette.primary,
+    },
+    h2: {
+      fontSize: "2rem",
+      color: palette.secondary,
+    },
   },
 });

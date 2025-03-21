@@ -1,38 +1,37 @@
+import { Box, Link, Stack, Typography } from "@mui/material";
+
 import { CodeBlock } from "~/components/CodeBlock";
 
 export const MUISetupStep = () => {
   return (
-    <div>
-      <div>
-        <p>1. Install</p>
+    <Stack spacing={2}>
+      <Box>
+        <Typography>1. Install MUI</Typography>
         <CodeBlock>
           npm install @mui/material @emotion/react @emotion/styled
           @fontsource/roboto @mui/icons-material
         </CodeBlock>
-      </div>
+      </Box>
 
-      <div>
-        <p>2. Add theme</p>
+      <Stack spacing={1}>
+        <Typography>2. Add theme</Typography>
         <CodeBlock multiline>
-          {`
-    //main.tsx
-    
-    <ThemeProvider theme={theme}>{appcomponents}</ThemeProvider>
-          `}
+          {`    //main.tsx
+    <ThemeProvider theme={theme}>{appcomponents}</ThemeProvider>`}
         </CodeBlock>
-        <p>
-          <a
+        <Typography>
+          <Link
             href="https://mui.com/material-ui/customization/color/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Color documentation
-          </a>
-        </p>
-        Theme example:
+          </Link>
+        </Typography>
+
+        <Typography>Theme example:</Typography>
         <CodeBlock multiline>
-          {`
-    //themeName.ts
+          {`    //themeName.ts    
     import { createTheme } from "@mui/material";
     import { deepOrange, grey, teal } from "@mui/material/colors";
 
@@ -65,29 +64,26 @@ export const MUISetupStep = () => {
             color: palette.text,
             },
         },
-    });
-
-          `}
+    });`}
         </CodeBlock>
-      </div>
-      <div>
-        <p>
+      </Stack>
+      <Box>
+        <Typography>
           3. For dark mode: add between ThemeProvider start and app components:
-        </p>
+        </Typography>
         <CodeBlock>{`<CssBaseline enableColorScheme />`}</CodeBlock>
-        <p>Dark Mode Switch Example</p>
+        <Typography>Dark Mode Switch Example</Typography>
         <CodeBlock multiline>
           {`
     <Box sx={{ textAlign: 'right' }} onClick={toggleDarkMode}>
-    <Switch inputProps={{ 'aria-label': 'Dark mode' }} checked={darkMode} />
-    <FormLabel sx={{ '&:hover': { cursor: 'pointer' } }}>
-    Dark Mode
-    </FormLabel>
+      <Switch inputProps={{ 'aria-label': 'Dark mode' }} checked={darkMode} />
+        <FormLabel sx={{ '&:hover': { cursor: 'pointer' } }}>
+          Dark Mode
+        </FormLabel>
     </Box>
-    
           `}
         </CodeBlock>
-      </div>
-    </div>
+      </Box>
+    </Stack>
   );
 };

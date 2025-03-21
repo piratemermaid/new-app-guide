@@ -1,23 +1,20 @@
+import { Box, Stack, Typography } from "@mui/material";
+
 import { CodeBlock } from "~/components/CodeBlock";
 
-type Props = {
-  step: Step;
-};
-
-export const PrettierSetupStep = ({ step }: Props) => {
+export const PrettierSetupStep = () => {
   return (
-    <div>
-      <h3>Prettier</h3>
-      <p>Last updated: {step.lastUpdated}</p>
-      <p>1. Install Prettier if needed</p>
-      <CodeBlock>{`npm i --save-dev prettier TODO check this`}</CodeBlock>
-      <p>
-        2. Create prettier config in project root
+    <Stack spacing={2}>
+      <Box>
+        <Typography>1. Install Prettier</Typography>
+        <CodeBlock>{`npm i --save-dev prettier TODO check this`}</CodeBlock>
+      </Box>
+      <Box>
+        <Typography>2. Create prettier config in project root</Typography>
         <CodeBlock>touch .prettierrc</CodeBlock>
-      </p>
-      <p>Recommended rules:</p>
-      <CodeBlock multiline>
-        {`
+        <Typography>Recommended rules:</Typography>
+        <CodeBlock multiline>
+          {`
   {
     "semi": true,
     "singleQuote": true,
@@ -32,24 +29,28 @@ export const PrettierSetupStep = ({ step }: Props) => {
     "jsxBracketSameLine": false,
     "proseWrap": "preserve"
   }
-
-`}
-      </CodeBlock>
-      <p>3. Ignore node modules</p>
-      <CodeBlock> touch .prettierignore</CodeBlock>
-      <CodeBlock>
-        {`
+    `}
+        </CodeBlock>
+      </Box>
+      <Box>
+        <Typography>3. Ignore node modules</Typography>
+        <CodeBlock> touch .prettierignore</CodeBlock>
+        <CodeBlock>
+          {`
   //.prettierignore
-
   */node_modules/*
-
-`}
-      </CodeBlock>
-      <p>4. Format all files (prevents formatting in code diffs)</p>
-      Add script to package.json:
-      <CodeBlock>
-        {`"format-all": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css}\""`}
-      </CodeBlock>
-    </div>
+  `}
+        </CodeBlock>
+      </Box>
+      <Stack spacing={1}>
+        <Typography>
+          4. Format all files (prevents formatting in code diffs)
+        </Typography>
+        <Typography>Add script to package.json:</Typography>
+        <CodeBlock>
+          {`"format-all": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css}\""`}
+        </CodeBlock>
+      </Stack>
+    </Stack>
   );
 };

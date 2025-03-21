@@ -9,11 +9,14 @@ export const ViteSetupStep = ({ step }: Props) => {
     <div>
       <h3>Create Vite App</h3>
       <p>Last updated: {step.lastUpdated}</p>
-      <p>1. Create new vite app</p>
-      <CodeBlock>npm create vite@latest</CodeBlock>
-      <p>2. Set up import path</p>
-      <CodeBlock multiline>
-        {`
+      <div>
+        <p>1. Create new vite app</p>
+        <CodeBlock>npm create vite@latest</CodeBlock>
+      </div>
+      <div>
+        <p>2. Set up import path</p>
+        <CodeBlock multiline>
+          {`
   // vite.config.ts
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react';
@@ -29,20 +32,25 @@ export const ViteSetupStep = ({ step }: Props) => {
     },
   });
   `}
-      </CodeBlock>
-      With Typescript:
-      <p>3. Install required types</p>
-      <CodeBlock>npm install --save-dev @types/node</CodeBlock>
-      <p>4. In tsconfig, add to top of compiler options</p>
-      <CodeBlock>
-        {`
+        </CodeBlock>
+      </div>
+      <p>* If using Typescript:</p>
+      <div>
+        <p>3. Install required types</p>
+        <CodeBlock>npm install --save-dev @types/node</CodeBlock>
+      </div>
+      <div>
+        <p>4. In tsconfig, add to top of compiler options</p>
+        <CodeBlock>
+          {`
   "baseUrl": ".",
-   "paths": {
-     "~/*": ["./src/*"]
-   },
-   "typeRoots": ["./src/types"],
-        `}
-      </CodeBlock>
+  "paths": {
+    "~/*": ["./src/*"]
+    },
+    "typeRoots": ["./src/types"],
+    `}
+        </CodeBlock>
+      </div>
     </div>
   );
 };

@@ -7,6 +7,7 @@ function App() {
       {STEPS.ui.map((step, index) => {
         return (
           <div key={step.name} className="step">
+            <hr />
             <h2>{step.name}</h2>
             <step.Component key={index} step={step} />
           </div>

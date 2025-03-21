@@ -67,9 +67,33 @@ export const MUISetupStep = () => {
     });`}
         </CodeBlock>
       </Stack>
+      <Stack spacing={1}>
+        <Typography>3. Optional: Install desired font(s)</Typography>
+        <Link
+          href="https://fontsource.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Fontsource
+        </Link>
+        <Typography>Choose font(s), then install</Typography>
+        <CodeBlock>npm install @fontsource/fontname</CodeBlock>
+        <Typography>Import and set fontFamily in theme</Typography>
+        <CodeBlock>{`
+  //themeName.ts
+  import '@fontsource/fontname';
+  ...........
+  typography: {
+    allVariants: {
+      fontFamily: "'Font Name', sans-serif",
+    },
+  },
+  ...........
+        `}</CodeBlock>
+      </Stack>
       <Box>
         <Typography>
-          3. For dark mode: add between ThemeProvider start and app components:
+          4. For dark mode: add between ThemeProvider start and app components:
         </Typography>
         <CodeBlock>{`<CssBaseline enableColorScheme />`}</CodeBlock>
         <Typography>Dark Mode Switch Example</Typography>

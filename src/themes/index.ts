@@ -1,3 +1,5 @@
+//@ts-ignore - it's installed idk
+import "@fontsource-variable/noto-sans";
 import { createTheme } from "@mui/material";
 import { deepOrange, grey, teal } from "@mui/material/colors";
 
@@ -28,6 +30,7 @@ export const defaultTheme = createTheme({
   typography: {
     allVariants: {
       color: palette.text,
+      fontFamily: "'Noto Sans Variable', sans-serif",
     },
     h1: {
       fontSize: "3rem",

@@ -61,7 +61,7 @@ export const MUISetupStep = () => {
         },
         typography: {
             allVariants: {
-            color: palette.text,
+                color: palette.text,
             },
         },
     });`}

@@ -10,7 +10,7 @@ type Props = {
 export const CodeBlock = ({ multiline, children }: Props) => {
   console.log('TODO: multiline vs inline');
   return (
-    <Box style={{ background: 'darkblue' }}>
+    <Box sx={{ backgroundColor: 'primary.darkest' }}>
       <code>
         <pre>
           <ClickToCopy>{children}</ClickToCopy>

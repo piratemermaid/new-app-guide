@@ -1,6 +1,6 @@
 //@ts-ignore - it's installed idk
 import '@fontsource-variable/noto-sans';
-import { createTheme } from '@mui/material';
+import { createTheme, darken, lighten } from '@mui/material';
 import { deepOrange, grey, teal } from '@mui/material/colors';
 
 const palette = {
@@ -15,7 +15,14 @@ export const defaultTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
+      //TODO: add custom tokens to palette type
+      darkest: darken(palette.primary, 0.6),
+      darker: darken(palette.primary, 0.4),
+      dark: darken(palette.primary, 0.2),
       main: palette.primary,
+      light: lighten(palette.primary, 0.2),
+      lighter: lighten(palette.primary, 0.4),
+      lightest: lighten(palette.primary, 0.6),
     },
     secondary: {
       main: palette.secondary,

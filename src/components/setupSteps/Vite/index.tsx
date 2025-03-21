@@ -1,3 +1,5 @@
+import { CodeBlock } from "../../CodeBlock";
+
 type Props = {
   step: Step;
 };
@@ -10,13 +12,11 @@ export const ViteSetupStep = ({ step }: Props) => {
       <p>Last updated: {step.lastUpdated}</p>
 
       <p>1. Create new vite app</p>
-      <code>npm create vite@latest</code>
+      <CodeBlock>npm create vite@latest</CodeBlock>
 
       <p>2. Set up import path</p>
-      <div>
-        <code>
-          <pre>
-            {`
+      <CodeBlock multiline>
+        {`
             // vite.config.ts
             import { defineConfig } from 'vite';
             import react from '@vitejs/plugin-react';
@@ -32,12 +32,10 @@ export const ViteSetupStep = ({ step }: Props) => {
               },
             });
             `}
-          </pre>
-        </code>
+      </CodeBlock>
 
-        <p>3. If using typescript, install required types</p>
-        <code>npm install --save-dev @types/node</code>
-      </div>
+      <p>3. If using typescript, install required types</p>
+      <CodeBlock>npm install --save-dev @types/node</CodeBlock>
     </div>
   );
 };

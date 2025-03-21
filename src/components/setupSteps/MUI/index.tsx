@@ -13,32 +13,61 @@ export const MUISetupStep = () => {
 
       <div>
         <p>2. Add theme</p>
-        <CodeBlock>
-          {`<ThemeProvider theme={theme}>{appcomponents}</ThemeProvider>`}
+        <CodeBlock multiline>
+          {`
+    //main.tsx
+    
+    <ThemeProvider theme={theme}>{appcomponents}</ThemeProvider>
+          `}
         </CodeBlock>
         <p>
-          Color documentation:{" "}
-          <a>https://mui.com/material-ui/customization/color/ </a>
+          <a
+            href="https://mui.com/material-ui/customization/color/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Color documentation
+          </a>
         </p>
         Theme example:
         <CodeBlock multiline>
           {`
     //themeName.ts
-    export const themeName = createTheme({
-        mode: 'light',
+    import { createTheme } from "@mui/material";
+    import { deepOrange, grey, teal } from "@mui/material/colors";
+
+    const palette = {
+        primary: teal[500],
+        secondary: deepOrange[500],
+        background: grey[900],
+        text: grey[50],
+        disabled: grey[500],
+    };
+
+    export const defaultTheme = createTheme({
         palette: {
+            mode: "dark",
             primary: {
-                main: '#7dc599',
+                main: palette.primary,
             },
             secondary: {
-                main: '#dfaf86',
-                },
+                main: palette.secondary,
+            },
+            background: {
+                default: palette.background,
+            },
             action: {
-                disabled: '#a8a8a7',
+                disabled: palette.disabled,
+            },
+        },
+        typography: {
+            allVariants: {
+            color: palette.text,
             },
         },
     });
-                        `}
+
+          `}
         </CodeBlock>
       </div>
       <div>
@@ -56,7 +85,7 @@ export const MUISetupStep = () => {
     </FormLabel>
     </Box>
     
-    `}
+          `}
         </CodeBlock>
       </div>
     </div>

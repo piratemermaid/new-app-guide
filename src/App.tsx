@@ -1,6 +1,6 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
-import { STEPS } from "./steps";
+import { STEPS } from './steps';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
               <Typography variant="h2" sx={{ mt: 2 }}>
                 {step.name}
               </Typography>
-              <Typography variant="caption" sx={{ color: "action.disabled" }}>
+              <Typography variant="caption" sx={{ color: 'action.disabled' }}>
                 Last updated: {step.lastUpdated}
               </Typography>
             </Box>

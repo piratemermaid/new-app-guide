@@ -1,7 +1,7 @@
 //@ts-ignore - it's installed idk
-import "@fontsource-variable/noto-sans";
-import { createTheme } from "@mui/material";
-import { deepOrange, grey, teal } from "@mui/material/colors";
+import '@fontsource-variable/noto-sans';
+import { createTheme } from '@mui/material';
+import { deepOrange, grey, teal } from '@mui/material/colors';
 
 const palette = {
   primary: teal[500],
@@ -13,7 +13,7 @@ const palette = {
 
 export const defaultTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: 'dark',
     primary: {
       main: palette.primary,
     },
@@ -33,11 +33,11 @@ export const defaultTheme = createTheme({
       fontFamily: "'Noto Sans Variable', sans-serif",
     },
     h1: {
-      fontSize: "3rem",
+      fontSize: '3rem',
       color: palette.primary,
     },
     h2: {
-      fontSize: "2rem",
+      fontSize: '2rem',
       color: palette.secondary,
     },
   },

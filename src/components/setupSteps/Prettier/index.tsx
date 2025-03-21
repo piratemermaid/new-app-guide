@@ -1,6 +1,6 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from '@mui/material';
 
-import { CodeBlock } from "~/components/CodeBlock";
+import { CodeBlock } from '~/components/CodeBlock';
 
 export const PrettierSetupStep = () => {
   return (
@@ -50,6 +50,7 @@ export const PrettierSetupStep = () => {
         <CodeBlock>
           {`"format-all": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css}\""`}
         </CodeBlock>
+        <CodeBlock>npm run format-all</CodeBlock>
       </Stack>
     </Stack>
   );

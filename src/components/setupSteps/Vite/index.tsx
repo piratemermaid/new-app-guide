@@ -1,6 +1,6 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from '@mui/material';
 
-import { CodeBlock } from "~/components/CodeBlock";
+import { CodeBlock } from '~/components/CodeBlock';
 
 export const ViteSetupStep = () => {
   return (

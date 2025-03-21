@@ -1,6 +1,6 @@
-import { Box } from "@mui/material";
+import { Box } from '@mui/material';
 
-import { ClickToCopy } from "~/components";
+import { ClickToCopy } from '~/components';
 
 type Props = {
   multiline?: boolean;
@@ -8,9 +8,9 @@ type Props = {
 };
 
 export const CodeBlock = ({ multiline, children }: Props) => {
-  console.log("TODO: multiline vs inline");
+  console.log('TODO: multiline vs inline');
   return (
-    <Box style={{ background: "darkblue" }}>
+    <Box style={{ background: 'darkblue' }}>
       <code>
         <pre>
           <ClickToCopy>{children}</ClickToCopy>

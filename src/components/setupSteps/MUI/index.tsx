@@ -1,6 +1,6 @@
-import { Box, Link, Stack, Typography } from "@mui/material";
+import { Box, Link, Stack, Typography } from '@mui/material';
 
-import { CodeBlock } from "~/components/CodeBlock";
+import { CodeBlock } from '~/components/CodeBlock';
 
 export const MUISetupStep = () => {
   return (

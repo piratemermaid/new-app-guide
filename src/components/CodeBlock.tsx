@@ -1,5 +1,7 @@
 import { Box } from "@mui/material";
 
+import { ClickToCopy } from "~/components";
+
 type Props = {
   multiline?: boolean;
   children: string;
@@ -10,7 +12,9 @@ export const CodeBlock = ({ multiline, children }: Props) => {
   return (
     <Box style={{ background: "darkblue" }}>
       <code>
-        <pre>{children}</pre>
+        <pre>
+          <ClickToCopy>{children}</ClickToCopy>
+        </pre>
       </code>
     </Box>
   );

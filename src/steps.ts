@@ -1,11 +1,18 @@
-import { ViteSetupStep } from "./components/setupSteps/Vite";
+import { PrettierSetupStep, ViteSetupStep } from "~/components/setupSteps";
 
 export const STEPS: {
   ui: Step[];
   server: Step[];
   db: Step[];
 } = {
-  ui: [{ name: "Vite", Component: ViteSetupStep, lastUpdated: "3/21/2025" }],
+  ui: [
+    { name: "Vite", Component: ViteSetupStep, lastUpdated: "3/21/2025" },
+    {
+      name: "Prettier",
+      Component: PrettierSetupStep,
+      lastUpdated: "3/21/2025",
+    },
+  ],
   server: [],
   db: [],
 };

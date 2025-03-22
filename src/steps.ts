@@ -49,7 +49,8 @@ export const STEPS: {
     },
     {
       name: 'React Query',
-      docsUrl: 'https://tanstack.com/query/latest/docs/overview',
+      docsUrl:
+        'https://tanstack.com/query/latest/docs/framework/react/installation',
       Component: ReactQuerySetupStep,
       lastUpdated: '3/21/2025',
     },

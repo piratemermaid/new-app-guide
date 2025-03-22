@@ -1,18 +1,18 @@
 import { Box, Stack, Typography } from '@mui/material';
 
-import { CodeBlock } from '~/components';
+import { CodeBlock, StepTitle } from '~/components';
 
 export const ZustandSetupStep = () => {
   return (
     <Stack spacing={2}>
       <Box>
-        <Typography>1. Install</Typography>
+        <StepTitle>1. Install</StepTitle>
         <CodeBlock>npm install zustand</CodeBlock>
       </Box>
 
       <Box>
-        <Typography>2. Set up Store</Typography>
-        <Typography>
+        <StepTitle>2. Set up Store</StepTitle>
+        <Typography variant="body2">
           Example with some values persisted in local storage:
         </Typography>
         <CodeBlock multiline>{`
@@ -45,7 +45,7 @@ export const ZustandSetupStep = () => {
       </Box>
 
       <Box>
-        <Typography>3. Use store values in components</Typography>
+        <StepTitle>3. Use store values in components</StepTitle>
         <CodeBlock>{`const { darkMode } = useStore((state) => state.darkMode);`}</CodeBlock>
       </Box>
     </Stack>

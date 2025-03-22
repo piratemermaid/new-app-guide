@@ -1,12 +1,12 @@
 import { Box, Link, Stack, Typography } from '@mui/material';
 
-import { CodeBlock } from '~/components/CodeBlock';
+import { CodeBlock, StepTitle } from '~/components';
 
 export const MUISetupStep = () => {
   return (
     <Stack spacing={2}>
       <Box>
-        <Typography>1. Install MUI</Typography>
+        <StepTitle>1. Install MUI</StepTitle>
         <CodeBlock>
           npm install @mui/material @emotion/react @emotion/styled
           @fontsource/roboto @mui/icons-material
@@ -14,12 +14,12 @@ export const MUISetupStep = () => {
       </Box>
 
       <Stack spacing={1}>
-        <Typography>2. Add theme</Typography>
+        <StepTitle>2. Add theme</StepTitle>
         <CodeBlock multiline>
           {`    //main.tsx
     <ThemeProvider theme={theme}>{appcomponents}</ThemeProvider>`}
         </CodeBlock>
-        <Typography>
+        <Typography variant="body2">
           <Link
             href="https://mui.com/material-ui/customization/color/"
             target="_blank"
@@ -29,7 +29,7 @@ export const MUISetupStep = () => {
           </Link>
         </Typography>
 
-        <Typography>Theme example:</Typography>
+        <Typography variant="body2">Theme example:</Typography>
         <CodeBlock multiline>
           {`    //themeName.ts    
     import { createTheme } from "@mui/material";
@@ -67,8 +67,9 @@ export const MUISetupStep = () => {
     });`}
         </CodeBlock>
       </Stack>
+
       <Stack spacing={1}>
-        <Typography>3. Optional: Install desired font(s)</Typography>
+        <StepTitle>3. Optional: Install desired font(s)</StepTitle>
         <Link
           href="https://fontsource.org/"
           target="_blank"
@@ -76,9 +77,11 @@ export const MUISetupStep = () => {
         >
           Fontsource
         </Link>
-        <Typography>Choose font(s), then install</Typography>
+        <Typography variant="body2">Choose font(s), then install</Typography>
         <CodeBlock>npm install @fontsource/fontname</CodeBlock>
-        <Typography>Import and set fontFamily in theme</Typography>
+        <Typography variant="body2">
+          Import and set fontFamily in theme
+        </Typography>
         <CodeBlock>{`
   //themeName.ts
   import '@fontsource/fontname';
@@ -91,12 +94,13 @@ export const MUISetupStep = () => {
   ...........
         `}</CodeBlock>
       </Stack>
+
       <Box>
-        <Typography>
+        <Typography variant="body2">
           4. For dark mode: add between ThemeProvider start and app components:
         </Typography>
         <CodeBlock>{`<CssBaseline enableColorScheme />`}</CodeBlock>
-        <Typography>Dark Mode Switch Example</Typography>
+        <Typography variant="body2">Dark Mode Switch Example</Typography>
         <CodeBlock multiline>
           {`
     <Box sx={{ textAlign: 'right' }} onClick={toggleDarkMode}>

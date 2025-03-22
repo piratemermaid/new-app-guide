@@ -1,18 +1,19 @@
 import { Box, Stack, Typography } from '@mui/material';
 
-import { CodeBlock } from '~/components/CodeBlock';
+import { CodeBlock, StepTitle } from '~/components';
 
 export const PrettierSetupStep = () => {
   return (
     <Stack spacing={2}>
       <Box>
-        <Typography>1. Install Prettier</Typography>
+        <StepTitle>1. Install Prettier</StepTitle>
         <CodeBlock>{`npm i --save-dev prettier TODO check this`}</CodeBlock>
       </Box>
+
       <Box>
-        <Typography>2. Create prettier config in project root</Typography>
+        <StepTitle>2. Create prettier config in project root</StepTitle>
         <CodeBlock>touch .prettierrc</CodeBlock>
-        <Typography>Recommended rules:</Typography>
+        <Typography variant="body2">Recommended rules:</Typography>
         <CodeBlock multiline>
           {`
   {
@@ -32,8 +33,9 @@ export const PrettierSetupStep = () => {
     `}
         </CodeBlock>
       </Box>
+
       <Box>
-        <Typography>3. Ignore node modules</Typography>
+        <StepTitle>3. Ignore node modules</StepTitle>
         <CodeBlock> touch .prettierignore</CodeBlock>
         <CodeBlock>
           {`
@@ -42,11 +44,12 @@ export const PrettierSetupStep = () => {
   `}
         </CodeBlock>
       </Box>
+
       <Stack spacing={1}>
-        <Typography>
+        <StepTitle>
           4. Format all files (prevents formatting in code diffs)
-        </Typography>
-        <Typography>Add script to package.json:</Typography>
+        </StepTitle>
+        <Typography variant="body2">Add script to package.json:</Typography>
         <CodeBlock>
           {`"format-all": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css}\""`}
         </CodeBlock>

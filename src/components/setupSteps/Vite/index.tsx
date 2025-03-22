@@ -1,16 +1,17 @@
 import { Box, Stack, Typography } from '@mui/material';
 
-import { CodeBlock } from '~/components/CodeBlock';
+import { CodeBlock, StepTitle } from '~/components';
 
 export const ViteSetupStep = () => {
   return (
     <Stack spacing={2}>
       <Box>
-        <Typography>1. Create new vite app</Typography>
+        <StepTitle>1. Create new vite app</StepTitle>
         <CodeBlock>npm create vite@latest</CodeBlock>
       </Box>
+
       <Box>
-        <Typography>2. Set up import path</Typography>
+        <StepTitle>2. Set up import path</StepTitle>
         <CodeBlock multiline>
           {`
   // vite.config.ts
@@ -30,15 +31,18 @@ export const ViteSetupStep = () => {
   `}
         </CodeBlock>
       </Box>
+
       <Box>
-        <Typography>* If using Typescript:</Typography>
+        <Typography variant="body2">* If using Typescript:</Typography>
       </Box>
+
       <Box>
-        <Typography>3. Install required types</Typography>
+        <StepTitle>3. Install required types</StepTitle>
         <CodeBlock>npm install --save-dev @types/node</CodeBlock>
       </Box>
+
       <Box>
-        <Typography>4. In tsconfig, add to top of compiler options</Typography>
+        <StepTitle>4. In tsconfig, add to top of compiler options</StepTitle>
         <CodeBlock>
           {`
   "baseUrl": ".",

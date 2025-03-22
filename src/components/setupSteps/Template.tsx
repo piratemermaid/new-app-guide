@@ -1,5 +1,5 @@
-import { Box } from '@mui/material';
+import { Stack } from '@mui/material';
 
 export const TemplateSetupStep = () => {
-  return <Box>TemplateSetupStep TODO</Box>;
+  return <Stack>TemplateSetupStep TODO</Stack>;
 };

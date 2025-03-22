@@ -7,3 +7,4 @@ export * from './ReactQuery';
 export * from './ESLint';
 export * from './Husky';
 export * from './Vercel';
+export * from './Storybook';

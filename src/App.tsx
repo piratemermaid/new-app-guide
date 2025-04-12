@@ -12,6 +12,7 @@ function App() {
       <StackTabs
         selectedStack={selectedStack}
         setSelectedStack={setSelectedStack}
+        sx={{ position: 'sticky', top: 0, zIndex: 1, backgroundColor: 'white' }}
       />
       <Stack
         direction="row"
@@ -24,7 +25,13 @@ function App() {
           selectedStep={selectedStep}
           setSelectedStep={setSelectedStep}
         />
-        <Box sx={{ width: '100%' }}>
+        <Box
+          sx={{
+            width: '100%',
+            overflowY: 'auto',
+            maxHeight: 'calc(100vh - 100px)', // Adjust height as needed
+          }}
+        >
           <StepContent
             selectedStack={selectedStack}
             selectedStep={selectedStep}

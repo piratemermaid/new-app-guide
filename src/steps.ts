@@ -33,9 +33,10 @@ export const STEPS: Record<Stack, Step[]> = {
     },
     {
       name: 'Tanstack Router',
-      docsUrl: 'TODO',
+      docsUrl:
+        'https://tanstack.com/router/latest/docs/framework/react/quick-start',
       Component: TanstackRouterSetupStep,
-      lastUpdated: '3/21/2025',
+      lastUpdated: '4/12/2025',
     },
     {
       name: 'Zustand',
@@ -58,9 +59,9 @@ export const STEPS: Record<Stack, Step[]> = {
     },
     {
       name: 'Husky',
-      docsUrl: 'TODO',
+      docsUrl: 'https://typicode.github.io/husky/get-started.html',
       Component: HuskySetupStep,
-      lastUpdated: '3/21/2025',
+      lastUpdated: '4/12/2025',
     },
     {
       name: 'Vercel',

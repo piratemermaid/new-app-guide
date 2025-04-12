@@ -11,11 +11,7 @@ import {
   ZustandSetupStep,
 } from '~/components/setupSteps';
 
-export const STEPS: {
-  ui: Step[];
-  server: Step[];
-  db: Step[];
-} = {
+export const STEPS: Record<Stack, Step[]> = {
   ui: [
     {
       name: 'Vite',
@@ -79,6 +75,6 @@ export const STEPS: {
       lastUpdated: '3/21/2025',
     },
   ],
-  server: [],
+  be: [],
   db: [],
 };

@@ -7,7 +7,7 @@ export const PrettierSetupStep = () => {
     <Stack spacing={2}>
       <Box>
         <StepTitle>1. Install Prettier</StepTitle>
-        <CodeBlock>{`npm i --save-dev prettier TODO check this`}</CodeBlock>
+        <CodeBlock>{`npm i --save-dev prettier`}</CodeBlock>
       </Box>
 
       <Box>

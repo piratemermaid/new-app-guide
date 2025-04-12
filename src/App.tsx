@@ -1,32 +1,37 @@
-import { Box, Typography } from '@mui/material';
+import { useState } from 'react';
+import { Box, Stack } from '@mui/material';
 
-import { STEPS } from './steps';
+import { StepContent, StackTabs, StepTabs } from '~/components/layout';
 
 function App() {
+  const [selectedStack, setSelectedStack] = useState<Stack | null>(null);
+  const [selectedStep, setSelectedStep] = useState<StepName | null>(null);
+
   return (
-    <>
-      <Typography variant="h1" sx={{ mb: 2 }}>
-        UI
-      </Typography>
-      {STEPS.ui.map((step, index) => {
-        return (
-          <Box key={step.name} className="step" sx={{ my: 4 }}>
-            <hr />
-            <Box sx={{ my: 3 }}>
-              <Typography variant="h2" sx={{ mt: 2 }}>
-                {step.name}
-              </Typography>
-              <Typography variant="caption" sx={{ color: 'action.disabled' }}>
-                Last updated: {step.lastUpdated}
-              </Typography>
-            </Box>
-            <Box sx={{ mt: 2 }}>
-              <step.Component key={index} step={step} />
-            </Box>
-          </Box>
-        );
-      })}
-    </>
+    <Stack alignItems="flex-start" spacing={2}>
+      <StackTabs
+        selectedStack={selectedStack}
+        setSelectedStack={setSelectedStack}
+      />
+      <Stack
+        direction="row"
+        spacing={3}
+        alignItems="space-between"
+        sx={{ width: '95vw' }}
+      >
+        <StepTabs
+          selectedStack={selectedStack}
+          selectedStep={selectedStep}
+          setSelectedStep={setSelectedStep}
+        />
+        <Box sx={{ width: '100%' }}>
+          <StepContent
+            selectedStack={selectedStack}
+            selectedStep={selectedStep}
+          />
+        </Box>
+      </Stack>
+    </Stack>
   );
 }
 

@@ -213,6 +213,25 @@ if (!rootElement.innerHTML) {
 })`}
         </CodeBlock>
       </Box>
+
+      <Box>
+        <StepTitle>Link Example</StepTitle>
+        <CodeBlock multiline>
+          {`import { Link } from '@tanstack/react-router'
+
+function Component() {
+  return (
+    <Link
+      to="/somewhere/$somewhereId"
+      params={{ somewhereId: 'baz' }}
+      search={(prev) => ({ ...prev, foo: 'bar' })}
+    >
+      Click me
+    </Link>
+  )
+}`}
+        </CodeBlock>
+      </Box>
     </Stack>
   );
 };

@@ -65,9 +65,9 @@ export const STEPS: Record<Stack, Step[]> = {
     },
     {
       name: 'Vercel',
-      docsUrl: 'TODO',
+      docsUrl: 'https://vercel.com/docs/frameworks/vite',
       Component: VercelSetupStep,
-      lastUpdated: '3/21/2025',
+      lastUpdated: '5/09/2025',
     },
     {
       name: 'Storybook',

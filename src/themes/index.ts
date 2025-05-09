@@ -1,4 +1,4 @@
-//@ts-ignore - it's installed idk
+//@ts-expect-error - it's installed idk
 import '@fontsource-variable/noto-sans';
 import { createTheme, darken, lighten } from '@mui/material';
 import { grey, pink, teal } from '@mui/material/colors';

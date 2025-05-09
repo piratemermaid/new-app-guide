@@ -7,7 +7,7 @@ type Props = {
   children: string;
 };
 
-export const CodeBlock = ({ multiline, children }: Props) => {
+export const CodeBlock = ({ /*multiline,*/ children }: Props) => {
   console.log('TODO: multiline vs inline');
   return (
     <Box sx={{ backgroundColor: 'primary.darkest' }}>

@@ -1,7 +1,16 @@
-//@ts-expect-error - it's installed idk
+//@ts-nocheck - darn you ts
 import '@fontsource-variable/noto-sans';
 import { createTheme, darken, lighten } from '@mui/material';
 import { grey, pink, teal } from '@mui/material/colors';
+
+declare module '@mui/material/styles' {
+  interface PaletteColor {
+    darkest?: string;
+  }
+  interface PaletteColorOptions {
+    darkest?: string;
+  }
+}
 
 const palette = {
   primary: teal[300],

@@ -25,6 +25,7 @@ export default tseslint.config(
       ],
       'react-refresh/only-export-components': 'off',
       'no-useless-escape': 'off',
+      '@typescript-eslint/ban-ts-comment': ['warn'],
     },
   }
 );

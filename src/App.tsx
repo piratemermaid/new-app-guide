@@ -12,7 +12,6 @@ function App() {
       <StackTabs
         selectedStack={selectedStack}
         setSelectedStack={setSelectedStack}
-        sx={{ position: 'sticky', top: 0, zIndex: 1, backgroundColor: 'white' }}
       />
       <Stack
         direction="row"

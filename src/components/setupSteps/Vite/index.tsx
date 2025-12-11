@@ -23,7 +23,9 @@ export const ViteSetupStep = () => {
     plugins: [react()],
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, './src'),
+        "@": path.resolve(__dirname, "./src/"),
+        "@stories": path.resolve(__dirname, "./src/stories"),
+        ...other folders
       },
     },
   });
@@ -46,7 +48,7 @@ export const ViteSetupStep = () => {
           {`
   "baseUrl": ".",
   "paths": {
-    "~/*": ["./src/*"]
+    "@*": ["src/*"]
     },
   "typeRoots": ["./src/types"],
           `}

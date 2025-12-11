@@ -48,7 +48,8 @@ export const ViteSetupStep = () => {
           {`
   "baseUrl": ".",
   "paths": {
-    "@*": ["src/*"]
+    "@*": ["src/*"],
+    "@stories/*": ["./src/stories/*"]
     },
   "typeRoots": ["./src/types"],
           `}

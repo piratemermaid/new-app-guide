@@ -9,6 +9,8 @@ import {
   VercelSetupStep,
   ViteSetupStep,
   ZustandSetupStep,
+  NodeFastifySetupStep,
+  PrismaSetupStep,
 } from '~/components/setupSteps';
 
 export const STEPS: Record<Stack, Step[]> = {
@@ -76,6 +78,20 @@ export const STEPS: Record<Stack, Step[]> = {
       lastUpdated: '3/21/2025',
     },
   ],
-  be: [],
-  db: [],
+  be: [
+    {
+      name: 'Node + Fastify',
+      docsUrl: 'TODO',
+      Component: NodeFastifySetupStep,
+      lastUpdated: '2/16/2026',
+    },
+  ],
+  db: [
+    {
+      name: 'Prisma',
+      docsUrl: 'TODO',
+      Component: PrismaSetupStep,
+      lastUpdated: '2/16/2026',
+    },
+  ],
 };

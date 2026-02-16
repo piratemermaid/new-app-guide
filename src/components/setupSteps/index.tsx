@@ -8,3 +8,5 @@ export * from './ESLint';
 export * from './Husky';
 export * from './Vercel';
 export * from './Storybook';
+export * from './NodeFastify';
+export * from './Prisma';

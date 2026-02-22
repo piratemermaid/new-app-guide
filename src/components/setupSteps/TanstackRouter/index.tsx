@@ -232,6 +232,22 @@ function Component() {
 }`}
         </CodeBlock>
       </Box>
+
+      <Box>
+        <StepTitle>8. Turn off auto code splitting</StepTitle>
+        <Typography>Do this if your routes are taking time to load.</Typography>
+        <CodeBlock multiline>
+          {`vite.config.ts
+          export default defineConfig({
+            ...
+            tanstackRouter: {
+              ...,
+              autoCodeSplitting: false,
+            },
+          )}
+          `}
+        </CodeBlock>
+      </Box>
     </Stack>
   );
 };
